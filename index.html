@@ -4,8 +4,8 @@
         <!--ASSESSMENNNNNNTTT !!!!!!!!!!+++++++-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="design/styles.css">
-        <link rel="stylesheet" href="design/buy.css">
+        <link rel="stylesheet" href="design/doggo.css">
+        <link rel="stylesheet" href="design/modal.css">
         <link rel="stylesheet" href="design/navBar.css">
         <link rel="stylesheet" href="design/animation.css">
          <link rel="shortcut icon" href="resources/icon/icon.png" type="image/x-icon">
@@ -15,13 +15,13 @@
         <header class="main-header">
             <nav class="nav main-grid">
                 <div style="display: flex;">
-                    <a style="padding-top: 5px;" href="index.html"><img src="resources/icon/icon.png" alt="logo" width="35px" height="35px" class="logo"></a>
+                    <a style="padding-top: 5px;" href="#home"><img src="resources/icon/icon.png" alt="logo" width="35px" height="35px" class="logo"></a>
                     <a href="#" class="header_logo">Doggo</a>
                 </div>
                 <div class="nav_menu_list" id="nav_menu_ID">
                     <ul class="nav_item_list">
                         <li class="nav_item"><a onclick="myFunctionHide()" href="#home" class="nav_link active">Home</a></li>
-                        <li class="nav_item"><a onclick="myFunctionHide()" href="#shop" class="nav_link">Shop</a></li>
+                        <li class="nav_item"><a onclick="myFunctionHide()" href="#shop" class="nav_link">Foods</a></li>
                         <li class="nav_item"><a onclick="myFunctionHide()" href="#report" class="nav_link">Report</a></li>
                     </ul>
                 </div>
@@ -69,7 +69,7 @@
                 </div>
                     <div class="shop__container main-grid">
                         <div class="food_image">
-                            <img id="orderImage" class="food1Image" src="resources/products/Hills_Science_Diet_Dry.jpg" alt="" width="50" height="50">
+                            <img id="orderImage" class="food1Image" src="resources/products/Hills_Science_Diet_Dry.jpg" alt="" >
                             <div style=" align-items: center; padding: 20px;">
                                 <p id="food__title" class="food1Title">HILLS SCIENCE DIET<br>DRY</p>
                                 <p id="food__type" class="food1Type"> <b>ITEM FORM:</b> DRY </p>
@@ -123,13 +123,9 @@
                     <div class="modal-grid" style="display: flex; justify-content: center;">
                         <div>
                             <img id="modalImage" src="" alt="" style="border-radius: 2rem; margin-right: 2rem;">
-                        </div>
-                        <div>
-                            <h1 id="modalTitle"></h1>
-                            <p id="modalType"></p>
-                            <p id="modalPrice"></p>
-                            <label for="weeks">CHOOSE A WEEKDAY:</label>
-                                <select name="weeks" id="weeks">
+                     
+                            <label style="font-weight: 600" for="weeks">CHOOSE A WEEKDAY:</label>
+                                <select style="margin-left: 1rem" name="weeks" id="weeks">
                                     <option value="sunday">SUNDAY</option>
                                     <option value="monday">MONDAY</option>
                                     <option value="tuesday">TUESDAY</option>
@@ -138,10 +134,22 @@
                                     <option value="friday">FRIDAY</option>
                                     <option value="saturday">SATURDAY</option>
                                 </select>
-                            <div class="text-input">
+                                  <div class="text-input">
                                 <input type="number"  id="getOrderKilo"  placeholder="Enter Kilogram">
-                                <label for="getOrderKilo">Kilogram</label>
-                              </div>
+                                <label for="getOrderKilo">Kilogram</label>    
+                              </div>                               
+                              <div class="text-input">
+                                <input type="number" placeholder="Php. 0.00" id="modalCash"> 
+                               <label for="modalCash">Enter Cash</label>                                   
+                              </div>                                 
+                        </div>
+                        <div>
+                            <h1 id="modalTitle"></h1>
+                            <p id="modalType"></p>
+                            <p id="modalPrice"></p>
+                            <p style="font-weight: 600;">AMOUNT: </p> 
+                            <input type="text" placeholder="Php. 0.00" id="modalAmount" style="width: 6rem; margin-left: 1rem; readOnly: true; color: gray; font-weight: bolder;">                <p style="font-weight: 600;">CHANGE: </p> 
+                            <input type="text" placeholder="Php. 0.00" id="modalChange" style="width: 6rem; margin-left: 1rem; readOnly: true; color: gray; font-weight: bolder;">                
                         </div>
                    </div>
                   </div>
@@ -152,7 +160,7 @@
         </div>
         <script src="script/report/order.js"></script>
         <script src="script/main.js"></script>
-        <script src="script/report/buy.js"></script>
+        <script src="script/report/modal.js"></script>
         <script src="script/frameworks/chart.js"></script>
         <script src="script/report/report.js"></script>
     </body>
