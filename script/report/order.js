@@ -1,3 +1,4 @@
+var order;
 var weekdays = [
     "SUNDAY",
     "MONDAY",
@@ -203,8 +204,8 @@ var processedOrder = {
 }
 
 function processOrder(button) {
-    var order = buttonBuyCollection[button];
-    document.getElementById("modalImage").setAttribute("src", order.orderImage);
+    order = buttonBuyCollection[button];
+     document.getElementById("modalImage").setAttribute("src", order.orderImage);
     selectedProduct = document.getElementById("modalTitle").innerText = order.foodTitle;
     document.getElementById("modalType").innerText = order.foodtype;
     orderPrice = document.getElementById("modalPrice").innerText = order.foodPrice;

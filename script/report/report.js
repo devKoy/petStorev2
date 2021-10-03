@@ -42,13 +42,12 @@ function reProcess() {
     var values = [day1Visit, day2Visit, day3Visit, day4Visit, day5Visit, day6Visit, day7Visit];
     var color = ["red", "green", "white", "blue", "violet", "orange", "yellow"]
     new Chart("myCustomerVisitChart", {
-        type: "pie",
+        type: "line",
         data: {
             labels: xReportValues,
             datasets: [{
-                backgroundColor: color,
                 data: values,
-                borderColor: "black",
+                borderColor: "blue",
                 fill: true,
                 label: "PEOPLE VISITED THE STORE"
             }]
@@ -97,13 +96,14 @@ function reProcess() {
         +processedOrder["SATURDAY"].NUTRO_ULTRA_LARGE_BREED.KILO;
 
     var xValues = ["PURINA", "ROYAL", "HILLS", "NUTRO"];
+    var colorKilo = ["red", "green", "white", "blue"]
     var yValues = [a, b, c, d];
     new Chart("getOrderKiloWeekChart", {
-        type: "bar",
+        type: "doughnut",
         data: {
             labels: xValues,
             datasets: [{
-                backgroundColor: "red",
+                backgroundColor: colorKilo,
                 borderColor: "#304D63",
                 data: yValues,
                 label: "KILO"
@@ -115,7 +115,7 @@ function reProcess() {
             },
             title: {
                 display: true,
-                text: "AMOUNT OF DOG FOODS TO BE ORDERED FOR NEXT WEEK"
+                text: "AMOUNT OF DOG FOODS TO BE ORDERED FOR NEXT WEEK (KG)"
             }
         }
     });
