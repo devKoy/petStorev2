@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--ASSESSMENNNNNNTTT !!!!!!!!!!+++++++-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="design/doggo.css">
+        <link rel="stylesheet" href="design/modal.css">
+        <link rel="stylesheet" href="design/navBar.css">
+        <link rel="stylesheet" href="design/animation.css">
+         <link rel="shortcut icon" href="resources/icon/icon.png" type="image/x-icon">
+        <title></title>
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="nav main-grid">
+                <div style="display: flex;">
+                    <a style="padding-top: 5px;" href="#home"><img src="resources/icon/icon.png" alt="logo" width="35px" height="35px" class="logo"></a>
+                    <a href="#" class="header_logo">Doggo</a>
+                </div>
+                <div class="nav_menu_list" id="nav_menu_ID">
+                    <ul class="nav_item_list">
+                        <li class="nav_item"><a onclick="myFunctionHide()" href="#home" class="nav_link active">Home</a></li>
+                        <li class="nav_item"><a onclick="myFunctionHide()" href="#shop" class="nav_link">Foods</a></li>
+                        <li class="nav_item"><a onclick="myFunctionHide()" href="#report" class="nav_link">Report</a></li>
+                    </ul>
+                </div>
+                <div class="toggler" id="nav-toggle">
+                    <div class="navbarButton navbar-toggler">
+                        <div class="container" onclick="myFunction(this)" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="l-main" >
+            <section class="home main-grid" id="home" >
+                <div class="home__img">    
+                    <img src="resources/dooggeee.png" alt="">
+                </div>
+                <div class="message_home">
+                    <h1 class="home_h1_message animated bounce">Your neighborhood store <br> for pets.</h1>
+                    <button class="bone animated rubberBand ">
+                        <div class="c1"></div>
+                        <div class="c2"></div>
+                        <div class="c3"></div>
+                        <div class="c4"></div>
+                        <div class="b1">
+                          <div class="b2"> <a style="text-decoration: none;" href="#shop"> SHOP NOW</a>
+                            
+                          </div>
+                        </div>
+                    </button>
+                </div>
+            </section>
+            <section class="Shop section " id="shop">
+                <h2 class="section-title">DOG FOODS SECTION</h2>
+                <div id="popup1" class="overlay">
+                    <div class="popup">
+                        <h2>ORDER_SUCCESSFULLY ORDERED</h2>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            <p>Thanks for buying, We hope to see you soon.</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="shop__container main-grid">
+                        <div class="food_image">
+                            <img id="orderImage" class="food1Image" src="resources/products/Hills_Science_Diet_Dry.jpg" alt="" >
+                            <div style=" align-items: center; padding: 20px;">
+                                <p id="food__title" class="food1Title">HILLS SCIENCE DIET<br>DRY</p>
+                                <p id="food__type" class="food1Type"> <b>ITEM FORM:</b> DRY </p>
+                                <p id="food__price" class="food1Price"><b>PRICE:</b> PHP: <span id="price"> 45.00 </span></p>
+                                <a href="#shop" class="food_buton" id="button1">BUY NOW</a>
+                            </div>
+                        </div>
+                        <div class="food_image">
+                            <img id="orderImage" class="food2Image" src="resources/products/Nutro_Ultra.jpg" alt="">
+                            <div style=" align-items: center; padding: 20px;">
+                                <p id="food__title" class="food2Title">NUTRO ULTRA LARGE <br> BREED </p>
+                                <p id="food__type" class="food2Type"> <b>ITEM FORM:</b> DRY </p>
+                                <p id="food__price" class="food2Price"><b>PRICE:</b> PHP: <span id="price">65.00 </span></p>
+                                <a href="#shop" class="food_buton" id="button2">BUY NOW</a>
+                            </div>
+                        </div>
+                        <div class="food_image">
+                            <img id="orderImage" class="food3Image" src="resources/products/Purina_Pro_Plan.jpg" alt="">
+                            <div  style=" align-items: center; padding: 20px;">
+                                <p id="food__title" class="food3Title">PURINA PRO PLAN WITH <br> PROBIOTICS</p>
+                                <p id="food__type" class="food3Type"> <b>ITEM FORM:</b> DRY </p>
+                                <p id="food__price" class="food3Price"><b>PRICE:</b> PHP: <span id="price">70.00 </span></p>
+                                <a href="#shop" class="food_buton" id="button3">BUY NOW</a>
+                            </div>
+                        </div>
+                        <div class="food_image">
+                            <img id="orderImage" class="food4Image" src="resources/products/Royal_canin_small.jpg" alt="">
+                            <div style=" align-items: center; padding: 20px;">
+                                <p id="food__title" class="food4Title">ROYAL CANIN <br> SMALL </p>
+                                <p id="food__type" class="food4Type"> <b>ITEM FORM:</b> DRY </p>
+                                <p id="food__price" class="food4Price"><b>PRICE:</b> PHP: <span id="price">80.00 </span></p>
+                                <a href="#shop" class="food_buton" id="button4">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>              
+            </section>
+            <section class="report section" id="report">
+                <h2 class="section-title">REPORT</h2>
+                <div class="report__container main-grid" style=" font-weight: 900;">  
+                    <canvas id="myCustomerVisitChart" style="width:100%; max-width:600px; "height="300px" ></canvas> 
+                    <canvas id="getOrderKiloWeekChart" style="width:100%; max-width:600px" height="300px"></canvas>
+                </div> 
+            </section>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <div class="modamain-header">
+                    <span class="close">&times;</span>
+                    <h2 id="modalName">ORDER DETAILS</h2>
+                  </div>
+                  <div class="modal-body">
+                    <div class="modal-grid" style="display: flex; justify-content: center;">
+                        <div>
+                            <img id="modalImage" src="" alt="" style="border-radius: 2rem; margin-right: 2rem;">
+                     
+                            <label style="font-weight: 600" for="weeks">CHOOSE A WEEKDAY:</label>
+                                <select style="margin-left: 1rem" name="weeks" id="weeks">
+                                    <option value="sunday">SUNDAY</option>
+                                    <option value="monday">MONDAY</option>
+                                    <option value="tuesday">TUESDAY</option>
+                                    <option value="wednesday">WEDNESDAY</option>
+                                    <option value="thursday">THURSDAY</option>
+                                    <option value="friday">FRIDAY</option>
+                                    <option value="saturday">SATURDAY</option>
+                                </select>
+                                  <div class="text-input">
+                                <input type="number"  id="getOrderKilo"  placeholder="Enter Kilogram">
+                                <label for="getOrderKilo">Kilogram</label>    
+                              </div>                               
+                              <div class="text-input">
+                                <input type="number" placeholder="Php. 0.00" id="modalCash"> 
+                               <label for="modalCash">Enter Cash</label>                                   
+                              </div>                                 
+                        </div>
+                        <div>
+                            <h1 id="modalTitle"></h1>
+                            <p id="modalType"></p>
+                            <p id="modalPrice"></p>
+                            <p style="font-weight: 600;">AMOUNT: </p> 
+                            <input type="text" placeholder="Php. 0.00" id="modalAmount" style="width: 6rem; margin-left: 1rem; readOnly: true; color: gray; font-weight: bolder;">                <p style="font-weight: 600;">CHANGE: </p> 
+                            <input type="text" placeholder="Php. 0.00" id="modalChange" style="width: 6rem; margin-left: 1rem; readOnly: true; color: gray; font-weight: bolder;">                
+                        </div>
+                   </div>
+                  </div>
+                  <div class="modal-footer">
+                    <h3 id="modalBuy">CONFIRM</h3>
+                  </div>
+            </div>
+        </div>
+        <script src="script/report/order.js"></script>
+        <script src="script/main.js"></script>
+        <script src="script/report/modal.js"></script>
+        <script src="script/frameworks/chart.js"></script>
+        <script src="script/report/report.js"></script>
+    </body>
+</html>
