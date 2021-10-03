@@ -38,7 +38,7 @@ buy_button.addEventListener("click", function () {
     						cash.value = "";
     						change.value = "";
     						amount.value = "";
-    						inputKilo.value = "";
+    			
     						saveDataSet();
     			}else{
     						alert("Please just please complete the form. Thank you!");
